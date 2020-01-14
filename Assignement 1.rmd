@@ -1,0 +1,37 @@
+---
+title: "Assignment 1"
+author: "Nathaniel Gunter"
+date: "1/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Assignement 1
+
+## 1
+The final course grade is worked as a combination of four assignments, sixteen labs with additional classroom exercises, two projects, daily clicker quizzes, online chapter quizzes, two midterm exams, and the final exam. The class is graded on a ten point scale.
+
+TODO: Add percentages, figure out how to link with LaTeX so that the calculation can be displayed properly.
+
+## 2
+```{r loadDDT}
+ddt<-read.csv("DDT.csv")
+```
+SKETCH: Load DDT.csv
+### a)
+build using the following: coplot(LENGHT ~ WEIGHT | RIVER*SPECIES) plus a few options
+### b)
+Learn how to interpret coplots
+### c)
+see b)
+### d)
+see b)
+### e)
+see b)
+### f)
+```{r meanDDT}
+catFCM<-subset(ddt,RIVER=="FCM"&SPECIES=="CCATFISH")
+mean(catFCM$DDT)
+```
