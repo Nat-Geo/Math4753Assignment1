@@ -7,6 +7,10 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(extrafont)
+loadfonts(device="win")
 ```
 # Assignement 1
 
@@ -35,3 +39,56 @@ see b)
 catFCM<-subset(ddt,RIVER=="FCM"&SPECIES=="CCATFISH")
 mean(catFCM$DDT)
 ```
+
+## 3
+MS 1.14-pg 8
+
+## 4
+MS pg 12-13
+### a)
+What are the names of the four random sampling designs (one simple and three complex)?
+### b)
+Give a brief description of each
+
+## 5
+MS 1.15 pg 15 
+
+## 6 
+MS 1.16 p 15
+
+## 7 
+MS STATISICS IN ACTION
+### a)
+What is the data collection method?
+### b)
+What is the population?
+### c)
+Give the names of all qualitative variables.
+
+## 8
+MS 2.1 pg 26
+
+## 9
+MS 2.4 pg 27 
+
+## 10 
+MS 2.10 pg 28
+
+## 11
+MS 2.72 pg 70
+
+## 12 
+MS 2.73 pg 70
+
+## 13
+MS 2.80 pg 72
+
+## 14
+MS 2.84 pg 74
+
+## 15
+```{r boxplot}
+boxplots <-ddt%>%ggplot(aes(x=RIVER,y=LENGTH,fill=SPECIES))+geom_boxplot()+ggtitle("Nathaniel Gunter")
+#+theme(text=element_text(size=16,family="TT Courier New"))
+boxplots
+```  
