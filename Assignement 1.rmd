@@ -25,7 +25,11 @@ ddt<-read.csv("DDT.csv")
 ```
 SKETCH: Load DDT.csv
 ### a)
-build using the following: coplot(LENGHT ~ WEIGHT | RIVER*SPECIES) plus a few options
+build using the following: 
+```{r buildCoplot}
+ddtPlot <- ddt %>% coplot(LENGTH ~ WEIGHT | RIVER*SPECIES)
+```
+coplot(LENGHT ~ WEIGHT | RIVER*SPECIES) plus a few options
 ### b)
 Learn how to interpret coplots
 ### c)
