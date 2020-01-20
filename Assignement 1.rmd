@@ -27,9 +27,8 @@ SKETCH: Load DDT.csv
 ### a)
 build using the following: 
 ```{r buildCoplot}
-ddtPlot <- ddt %>% coplot(LENGTH ~ WEIGHT | RIVER*SPECIES)
+ddtPlot <- with(ddt, coplot(LENGTH ~ WEIGHT | RIVER * SPECIES, col = MILE))
 ```
-coplot(LENGHT ~ WEIGHT | RIVER*SPECIES) plus a few options
 ### b)
 Learn how to interpret coplots
 ### c)
